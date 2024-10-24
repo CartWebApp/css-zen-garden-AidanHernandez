@@ -1,1 +1,42 @@
-/* Empty file for template. Remember to edit only this file and not the HTML file */
+body{
+    overflow: hidden;
+    background-image: url(img/backgroundv2.png);
+    background-size: cover;
+    background-position: 100% 25%;
+}
+
+.page-wrapper{
+    display: flex;
+   
+    
+}
+
+#header[role="banner"]{
+    
+    transform: rotate(90);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.zen-resources{
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    height: fit-content;
+    width: fit-content;
+    top:0;
+    right:10vw;
+}
