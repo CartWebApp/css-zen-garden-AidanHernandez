@@ -11,9 +11,9 @@ body{
     
 }
 
-#header[role="banner"]{
-    
-    transform: rotate(90);
+[role=banner]{
+    color:red;
+    transform: rotate(-90deg);
 }
 
 
