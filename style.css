@@ -1,42 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+*{
+    max-width: 100%;
+    object-fit: cover;
+}
+
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
     background-image: url(img/backgroundv2.png);
-    background-size: cover;
-    background-position: 100% 25%;
+    background-size: 100%;
+    background-position: 0% 75%;
+    background-repeat: no-repeat;
+    font-family: "Island Moments", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-attachment: fixed;
+}
+
+a:link{
+    text-decoration: underline;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #de578d;
 }
 
 .page-wrapper{
     display: flex;
-   
     
 }
 
-[role=banner]{
-    color:red;
+.intro{
+    display: flex;
+}
+
+
+header{
+    position: fixed;
+    display:inline-flex;
+    flex-flow: column wrap;
     transform: rotate(-90deg);
+    color: #665844;
+    width: 90%;
+    left: -18%;
+    overflow: hidden;
+}
+
+
+[role=banner] > h1{
+    
+    font-size: 80px;
+    margin-bottom: 0;
+    margin-left: 3.5%;
+    width: fit-content;
+}
+
+[role=banner] > h2{
+    margin-top: 0;
+    font-size: 50px;
+    margin-left: 3.5%;
+    width: fit-content;
+}
+
+
+
+.summary{
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: fixed;
+    width: 100%;
+    top:17%;
+    right: 2%;
+    color: #E699B8;
+}
+
+
+
+.summary > p:first-child{
+    font-size: 36px;
+    align-self: flex-end;
+    width: 15%;
+}
+
+.summary > p:nth-child(2){
+    font-size: 25px;
+    align-self: flex-end;
+    width: 20%;
+    margin-right: 11%;
+    margin-top: 0;
+}
+
+.summary > p > a{
+    color: #E699B8;
+}
+
+
+.design-selection{
+    display: none;
+}
+
+.design-archives{
+    display: none;
+}
+
+
+.zen-resources{
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: fixed;
+    width: 70%;
+    color: #E699B8;
+    top:13%;
+    
+}
+
+
+
+h3.resources{
+    width: fit-content;
+    align-self: flex-end;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-right: 5%;
+}
+
+.zen-resources > ul{
+    align-self: flex-end;
+    width: fit-content;
+    font-size: 30px
+}
+
+.zen-resources > ul > li >a{
+    color: #E699B8;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.zen-resources{
-    position: absolute;
-    display: flex;
+.preamble{
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.43);
+    display: inline-flex;
     flex-flow: column wrap;
-    height: fit-content;
-    width: fit-content;
+    position: absolute;
+    width: 45%;
+    top:50%;
+    right:1%;
+    transition: top 2s, opacity 2s;
+}
+
+.preamble > h3:first-of-type{
+    color: #665844;
+    font-size: 60px;
+    align-self: center;
+    margin-right: 14%;
+    margin-bottom: 0;
+}
+
+.preamble > p{
+    color: #591E34;
+    align-self: center;
+    margin-right: 4%;
+    width: 100%;
+    font-size: 25px;
+}
+
+.preamble:hover {
+   font-size: 100px;
+}
+
+.preamble:active{
     top:0;
-    right:10vw;
+    animation: mymove 5s forwards;
+    opacity: 0;
+}
+
+/* make time related */
+
+@keyframes mymove {
+    from {top:50%;}
+    to {top: 0%;}
+  }
+  
+
+
+.main.supporting{
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+}
+
+.explanation{
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 100%;
+    bottom: -100%;
+}
+
+.main.supporting > .explanation > h3:first-of-type{
+    color: #665844;
+    font-size: 60px;
+    margin-right: 14%;
+    margin-bottom: 0;
+    width: fit-content;
+
+    align-self: flex-end;
+}
+
+.main.supporting > .explanation > p{
+    color: #591E34;
+    align-self: flex-end;
+    margin-right: 4%;
+    width: 39%;
+    font-size: 25px;
+}
+
+.participation{
+    display: none;
+}
+
+.benefits{
+    display: none;
+}
+
+.requirements{
+    display: none;
+}
+
+footer{
+    display: none;
 }
