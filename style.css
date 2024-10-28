@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 
+*{
+    max-width: 100%;
+    object-fit: cover;
+}
+
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
     background-image: url(img/backgroundv2.png);
     background-size: 100%;
-    background-position: top;
+    background-position: 0% 75%;
     background-repeat: no-repeat;
     font-family: "Island Moments", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    background-attachment: fixed;
+}
 
+a:link{
+    text-decoration: underline;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #de578d;
 }
 
 .page-wrapper{
@@ -18,66 +33,184 @@ body{
 }
 
 .intro{
-    
+    display: flex;
 }
 
-section#zen-intro{
-    width: 100%;
-    height: 65vh;
-}
 
-[role=banner]{
-    position: absolute;
+header{
+    position: fixed;
     display:inline-flex;
-    flex-flow: row wrap;
-    color: #665844;
-    left: 12%;
-    height: 155%;
-    width: 30%;
+    flex-flow: column wrap;
     transform: rotate(-90deg);
-    justify-content: space-around;
+    color: #665844;
+    width: 90%;
+    left: -18%;
+    overflow: hidden;
 }
+
 
 [role=banner] > h1{
     
     font-size: 80px;
     margin-bottom: 0;
-    height: fit-content;
-    align-self: flex-end;
     
+    width: fit-content;
 }
 
 [role=banner] > h2{
     margin-top: 0;
-    
     font-size: 50px;
-    height: fit-content;
+    width: fit-content;
 }
+
+
 
 .summary{
-    width:20%;
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: fixed;
+    width: 100%;
+    top:17%;
+    right: 2%;
+    color: #E699B8;
 }
 
-.preamble{
-    width:20%
+
+
+.summary > p:first-child{
+    font-size: 36px;
+    align-self: flex-end;
+    width: 15%;
+}
+
+.summary > p:nth-child(2){
+    font-size: 25px;
+    align-self: flex-end;
+    width: 20%;
+    margin-right: 11%;
+    margin-top: 0;
+}
+
+.summary > p > a{
+    color: #E699B8;
 }
 
 
+.design-selection{
+    display: none;
+}
 
-
-
-
-
-
-
+.design-archives{
+    display: none;
+}
 
 
 .zen-resources{
-    position: absolute;
-    display: flex;
+    display: inline-flex;
     flex-flow: column wrap;
-    height: fit-content;
+    position: fixed;
+    width: 70%;
+    color: #E699B8;
+    top:13%;
+    
+}
+
+
+
+h3.resources{
     width: fit-content;
-    top:0;
-    right:10vw;
+    align-self: flex-end;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-right: 5%;
+}
+
+.zen-resources > ul{
+    align-self: flex-end;
+    width: fit-content;
+    font-size: 30px
+}
+
+.zen-resources > ul > li >a{
+    color: #E699B8;
+}
+
+
+
+
+.preamble{
+    z-index: 1;
+    background-color: white;
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 45%;
+    top:50%;
+    right:1%;
+}
+
+.preamble > h3:first-of-type{
+    color: #665844;
+    font-size: 60px;
+    align-self: center;
+    margin-right: 14%;
+    margin-bottom: 0;
+}
+
+.preamble > p{
+    color: #591E34;
+    align-self: center;
+    margin-right: 4%;
+    width: 100%;
+    font-size: 25px;
+}
+
+
+.main.supporting{
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+}
+
+.explanation{
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 100%;
+    bottom: -100%;
+}
+
+.main.supporting > .explanation > h3:first-of-type{
+    color: #665844;
+    font-size: 60px;
+    margin-right: 14%;
+    margin-bottom: 0;
+    width: fit-content;
+
+    align-self: flex-end;
+}
+
+.main.supporting > .explanation > p{
+    color: #591E34;
+    align-self: flex-end;
+    margin-right: 4%;
+    width: 39%;
+    font-size: 25px;
+}
+
+.participation{
+    display: none;
+}
+
+.benefits{
+    display: none;
+}
+
+.requirements{
+    display: none;
+}
+
+footer{
+    display: none;
 }
