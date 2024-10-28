@@ -53,14 +53,21 @@ header{
     
     font-size: 80px;
     margin-bottom: 0;
+<<<<<<< HEAD
     margin-left: 3.5%;
+=======
+    
+>>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
     width: fit-content;
 }
 
 [role=banner] > h2{
     margin-top: 0;
     font-size: 50px;
+<<<<<<< HEAD
     margin-left: 3.5%;
+=======
+>>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
     width: fit-content;
 }
 
@@ -141,14 +148,21 @@ h3.resources{
 
 .preamble{
     z-index: 1;
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.43);
+=======
+    background-color: white;
+>>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
     width: 45%;
     top:50%;
     right:1%;
+<<<<<<< HEAD
     transition: top 2s, opacity 2s;
+=======
+>>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
 }
 
 .preamble > h3:first-of-type{
@@ -167,6 +181,7 @@ h3.resources{
     font-size: 25px;
 }
 
+<<<<<<< HEAD
 .preamble:hover {
    font-size: 100px;
 }
@@ -185,6 +200,8 @@ h3.resources{
   }
   
 
+=======
+>>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
 
 .main.supporting{
     display: inline-flex;
