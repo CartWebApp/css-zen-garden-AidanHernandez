@@ -8,6 +8,7 @@
 body{
     /* overflow: hidden; */
     overflow-x: hidden;
+    overflow-y: hidden;
     background-image: url(img/backgroundv2.png);
     background-size: 100%;
     background-position: 0% 75%;
@@ -53,21 +54,17 @@ header{
     
     font-size: 80px;
     margin-bottom: 0;
-<<<<<<< HEAD
+
     margin-left: 3.5%;
-=======
-    
->>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
+
     width: fit-content;
 }
 
 [role=banner] > h2{
     margin-top: 0;
     font-size: 50px;
-<<<<<<< HEAD
     margin-left: 3.5%;
-=======
->>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
+
     width: fit-content;
 }
 
@@ -148,22 +145,21 @@ h3.resources{
 
 .preamble{
     z-index: 1;
-<<<<<<< HEAD
-    background-color: rgba(255, 255, 255, 0.43);
-=======
-    background-color: white;
->>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
+    background-color: rgba(255, 255, 255, 0.441);
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
     width: 45%;
     top:50%;
     right:1%;
-<<<<<<< HEAD
-    transition: top 2s, opacity 2s;
-=======
->>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
+    animation: leaving 10s forwards 5s;
 }
+
+@keyframes leaving {
+  0% {top: 50%; opacity: 1;}
+  100% {top:-50%; opacity: 0;}
+}
+
 
 .preamble > h3:first-of-type{
     color: #665844;
@@ -181,27 +177,12 @@ h3.resources{
     font-size: 25px;
 }
 
-<<<<<<< HEAD
-.preamble:hover {
-   font-size: 100px;
-}
 
-.preamble:active{
-    top:0;
-    animation: mymove 5s forwards;
-    opacity: 0;
-}
 
-/* make time related */
 
-@keyframes mymove {
-    from {top:50%;}
-    to {top: 0%;}
-  }
-  
 
-=======
->>>>>>> a8189ebbf04b70f39d270276f7667477f4c03475
+
+
 
 .main.supporting{
     display: inline-flex;
@@ -209,7 +190,18 @@ h3.resources{
     position: absolute;
     width: 100%;
     bottom: -100%;
+    animation: mysecond, leaving;
+    animation-fill-mode: forwards ;
+    animation-duration: 5s, 10s; 
+    animation-delay: 5s, 10s;
+    /* animation: mysecond 5s forwards 5s, leaving 10s forwards 5s; */
 }
+
+@keyframes mysecond {
+  0% {bottom: -100%; opacity: 0;}
+  100% {bottom:6%; opacity: 1;}
+}
+
 
 .explanation{
     display: inline-flex;
