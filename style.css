@@ -117,7 +117,7 @@ header{
     width: 70%;
     color: #E699B8;
     top:13%;
-    
+    z-index: 999;
 }
 
 
@@ -145,20 +145,15 @@ h3.resources{
 
 .preamble{
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.441);
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
     width: 45%;
-    top:50%;
+    top:47%;
     right:1%;
     animation: leaving 10s forwards 5s;
 }
 
-@keyframes leaving {
-  0% {top: 50%; opacity: 1;}
-  100% {top:-50%; opacity: 0;}
-}
 
 
 .preamble > h3:first-of-type{
@@ -179,48 +174,44 @@ h3.resources{
 
 
 
-
-
-
-
-
-.main.supporting{
+.explanation{
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
     width: 100%;
     bottom: -100%;
     animation: mysecond, leaving;
-    animation-fill-mode: forwards ;
+    animation-fill-mode: forwards;
     animation-duration: 5s, 10s; 
-    animation-delay: 5s, 10s;
-    /* animation: mysecond 5s forwards 5s, leaving 10s forwards 5s; */
+    animation-delay: 0s, 15s;
 }
+
+
+
+
 
 @keyframes mysecond {
   0% {bottom: -100%; opacity: 0;}
   100% {bottom:6%; opacity: 1;}
 }
 
+@keyframes leaving {
+    0% {top:47%;; opacity: 1;}
+    100% {top:-50%; opacity: 0;}
+  }
 
-.explanation{
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 100%;
-    bottom: -100%;
-}
 
-.main.supporting > .explanation > h3:first-of-type{
+
+.explanation > h3:first-of-type{
     color: #665844;
     font-size: 60px;
     margin-right: 14%;
     margin-bottom: 0;
     width: fit-content;
-
     align-self: flex-end;
 }
 
-.main.supporting > .explanation > p{
+.explanation > p{
     color: #591E34;
     align-self: flex-end;
     margin-right: 4%;
@@ -228,8 +219,37 @@ h3.resources{
     font-size: 25px;
 }
 
+
+
 .participation{
-    display: none;
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 50%;
+    bottom: -100%;
+    right:1%;
+    animation: mysecond, leaving;
+    animation-fill-mode: forwards;
+    animation-duration: 5s, 10s; 
+    animation-delay: 15s, 25s;
+}
+
+
+.participation > h3{
+    color: #665844;
+    font-size: 60px;
+    align-self: center;
+    margin-right: 14%;
+    margin-bottom: 0;
+}
+
+.participation > p{
+    color: #591E34;
+    align-self: center;
+    margin-right: 4%;
+    width: 100%;
+    font-size: 23px;
+    opacity: 1;
 }
 
 .benefits{
