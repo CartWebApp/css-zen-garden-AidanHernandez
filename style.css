@@ -151,7 +151,8 @@ h3.resources{
     width: 45%;
     top:47%;
     right:1%;
-    animation: leaving 10s forwards 5s;
+    animation: leaving 135s forwards 20s;
+    animation-iteration-count: infinite;
 }
 
 
@@ -168,22 +169,24 @@ h3.resources{
     color: #591E34;
     align-self: center;
     margin-right: 4%;
-    width: 100%;
     font-size: 25px;
 }
 
 
 
 .explanation{
+    z-index: 1;
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
-    width: 100%;
+    width: 45%;
+    right:1%;
     bottom: -100%;
     animation: mysecond, leaving;
     animation-fill-mode: forwards;
-    animation-duration: 5s, 10s; 
-    animation-delay: 0s, 15s;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count:  infinite, infinite; 
+    animation-delay: 20s, 40s;
 }
 
 
@@ -192,12 +195,14 @@ h3.resources{
 
 @keyframes mysecond {
   0% {bottom: -100%; opacity: 0;}
-  100% {bottom:6%; opacity: 1;}
+  6%{bottom: 15%; opacity:1;}
+  100% {bottom:15%; opacity: 1;}
 }
 
 @keyframes leaving {
     0% {top:47%;; opacity: 1;}
-    100% {top:-50%; opacity: 0;}
+    9% {top:-50%; opacity: 0;}
+    100%{top:-50%; opacity: 0;}
   }
 
 
@@ -205,35 +210,41 @@ h3.resources{
 .explanation > h3:first-of-type{
     color: #665844;
     font-size: 60px;
+    align-self: center;
     margin-right: 14%;
     margin-bottom: 0;
-    width: fit-content;
-    align-self: flex-end;
 }
 
 .explanation > p{
     color: #591E34;
-    align-self: flex-end;
+    align-self: center;
     margin-right: 4%;
-    width: 39%;
     font-size: 25px;
 }
 
 
 
 .participation{
+    z-index: 99;
     display: inline-flex;
     flex-flow: column wrap;
     position: absolute;
-    width: 50%;
+    width: 45%;
     bottom: -100%;
     right:1%;
-    animation: mysecond, leaving;
+    animation: participation, leaving;
     animation-fill-mode: forwards;
-    animation-duration: 5s, 10s; 
-    animation-delay: 15s, 25s;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 40s, 60s;
+    height: fit-content;
 }
 
+@keyframes participation {
+    0% {bottom: -100%; opacity: 0;}
+    6% {bottom:5%; opacity: 1;}
+    100% {bottom:5%; opacity: 1;}
+  }
 
 .participation > h3{
     color: #665844;
@@ -248,15 +259,204 @@ h3.resources{
     align-self: center;
     margin-right: 4%;
     width: 100%;
-    font-size: 23px;
+    font-size: 25px;
     opacity: 1;
 }
 
+
+
+
 .benefits{
-    display: none;
+    z-index: 99;
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 45%;
+    bottom: -100%;
+    right:1%;
+    animation: benefits, leaving;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 60s, 80s;
+    height: fit-content;
 }
 
+@keyframes benefits{
+    0% {bottom: -100%; opacity: 0;}
+    6% {bottom:28%; opacity: 1;}
+    100% {bottom:28%; opacity: 1;}
+}
+
+.benefits > h3{
+    color: #665844;
+    font-size: 60px;
+    align-self: center;
+    margin-right: 14%;
+    margin-bottom: 0;
+}
+
+.benefits > p{
+    color: #591E34;
+    align-self: center;
+    margin-right: 4%;
+    width: 100%;
+    font-size: 25px;
+    opacity: 1;
+}
+
+
+
 .requirements{
+    z-index: 99;
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: absolute;
+    width: 45%;
+    bottom: -100%;
+    right:1%;
+    height: 100%;
+}
+
+
+
+.requirements > h3{
+    color: #665844;
+    font-size: 60px;
+    align-self: center;
+    margin-right: 14%;
+    margin-bottom: 0;
+}
+
+.requirements > p{
+    position: absolute;
+    opacity: 1;
+    color: #591E34;
+    align-self: center;
+    margin-right: 4%;
+    width: 100%;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.requirements > h3:nth-child(1){
+    position: absolute;
+    bottom: 0%;
+    animation: requirements_h3, leaving_h3;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 80s, 100s;
+    opacity: 1;
+}
+
+@keyframes requirements_h3{
+    0% {bottom: 0%; opacity: 0;}
+    6% {bottom: 140%; opacity: 1;}
+    100% {bottom: 140%; opacity: 1;}
+}
+
+@keyframes leaving_h3 {
+    0% {bottom:140%; opacity: 1;}
+    9% {bottom:200%; opacity: 0;}
+    100% {bottom:200%; opacity: 0;}
+}
+
+.requirements > p:first-of-type{
+    bottom: -12%;
+    animation: requirements_p_1, leaving_p_1;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 80s, 100s;
+    opacity: 1;
+}
+
+@keyframes requirements_p_1{
+    0% {bottom: -12%; opacity: 0;}
+    6% {bottom: 128%; opacity: 1;}
+    100% {bottom: 128%; opacity: 1;}
+}
+
+@keyframes leaving_p_1 {
+    0% {bottom:128%; opacity: 1;}
+    9% {bottom:188%; opacity: 0;}
+    100% {bottom:188%; opacity: 0;}
+}
+
+.requirements > p:nth-of-type(2){
+    bottom: -28%;
+    animation: requirements_p_2, leaving_p_2;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 80s, 100s;
+    opacity: 1;
+}
+
+@keyframes requirements_p_2{
+    0% {bottom: -28%; opacity: 0;}
+    6% {bottom: 112%; opacity: 1;}
+    100% {bottom: 112%; opacity: 1;}
+}
+
+@keyframes leaving_p_2 {
+    0% {bottom:112%; opacity: 1;}
+    9% {bottom:172%; opacity: 0;}
+    100% {bottom:172%; opacity: 0;}
+}
+
+
+.requirements > p:nth-of-type(3){
+    bottom: -12%;
+    animation: requirements_p_3, leaving_p_3;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-delay: 100s, 120s;
+    opacity: 1;
+}
+
+@keyframes requirements_p_3{
+    0% {bottom: -12%; opacity: 0;}
+    6% {bottom: 128%; opacity: 1;}
+    100% {bottom: 128%; opacity: 1;}
+}
+
+@keyframes leaving_p_3 {
+    0% {bottom:128%; opacity: 1;}
+    9% {bottom:188%; opacity: 0;}
+    100% {bottom:188%; opacity: 0;}
+}
+
+
+.requirements > p:nth-of-type(4){
+    bottom: -22%;
+    animation: requirements_p_4, leaving_p_4;
+    animation-fill-mode: forwards;
+    animation-duration: 125s, 135s; 
+    animation-iteration-count: infinite, infinite; 
+    animation-iteration-count: infinite, infinite;
+    animation-delay: 100s, 120s;
+    opacity: 1;
+}
+
+@keyframes requirements_p_4{
+    0% {bottom: -22%; opacity: 0;}
+    6% {bottom: 118%; opacity: 1;}
+    100% {bottom: 118%; opacity: 1;}
+}
+
+@keyframes leaving_p_4{
+    0% {bottom:118%; opacity: 1;}
+    9% {bottom:178%; opacity: 0;}
+    100% {bottom:178%; opacity: 0;}
+}
+
+
+
+
+.requirements > p:nth-child(6){
     display: none;
 }
 
