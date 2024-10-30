@@ -154,7 +154,7 @@ h3.resources{
     opacity: 1;
     animation: rising_preamble, leaving_preamble;
     animation-fill-mode: forwards;
-    animation-duration: 60s, 70s; 
+    animation-duration: 125s, 130s; 
     animation-iteration-count:  infinite, infinite; 
     animation-delay: 0s, 20s;
 }
@@ -162,17 +162,33 @@ h3.resources{
 
 
 @keyframes rising_preamble {
-  0% {bottom: -100%; opacity: 0;}
-  6%{bottom: 10%; opacity:1;}
-  100% {bottom:10%; opacity: 1;}
+    0% {
+        bottom: -100%;
+        opacity: 0;
+      }
+      4% {
+        bottom: 10%;
+        opacity: 1;
+      }
+      100% {
+        bottom: 10%;
+        opacity: 1;
+      }
 }
 
 @keyframes leaving_preamble {
-    0% {bottom: 10%; opacity: 1;}
-    9% {bottom: 100%; opacity: 0;}
-    20%{bottom: -100%; opacity: 0;}
-    30%{bottom: -100%; opacity: 1;}
-    98%{bottom: -100%; opacity: 1;}
+    0% {
+        bottom: 10%;
+        opacity: 1;
+      }
+      7.692% {
+        bottom: 100%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
   }
 
 
