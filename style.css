@@ -106,7 +106,28 @@ header{
 }
 
 .design-archives{
-    display: none;
+    display: inline-flex;
+    position: absolute;
+    top:35%;
+    left:30%;
+    height: 50%;
+    flex-flow: column;
+    color: #E699B8;
+    width: 30%;
+}
+
+
+
+.archives{
+    align-self: center;
+    font-size: 30px
+}
+
+[role =navigation]{
+    position: absolute;
+    background-image: url(img/swing_2.png);
+    height: 10vh;
+    width: 10Vw;
 }
 
 
@@ -157,39 +178,32 @@ h3.resources{
     animation-duration: 120s, 130s; 
     animation-iteration-count:  infinite, infinite; 
     animation-delay: 1s, 20s; */
-    animation: rising_preamble 120s ease 0s infinite, leaving_preamble 130s ease 20s infinite forwards;
+    animation: preamble 125s ease 0s infinite;
 }
 
 
 
-@keyframes rising_preamble{
+@keyframes preamble{
     0% {
-        bottom: -100%; opacity: 0;
+        bottom: -100%;
+        opacity: 0;
       }
-
-    4% {
+      3.081% {
         bottom: 10%;
         opacity: 1;
       }
-    100% {
+      16% {
         bottom: 10%;
         opacity: 1;
       }
-}
-
-@keyframes leaving_preamble{
-    0% {
-        bottom: 10%;
-        opacity: 1;
-      }
-    7.692% {
+      22% {
         bottom: 100%;
         opacity: 0;
-    }
-    40%{bottom: -100%; opacity: 0;}
-    50%{bottom: -100%; opacity: 1;}
-
-    100% {bottom: -100%; opacity: 1;}
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
 }
 
 
@@ -218,28 +232,40 @@ h3.resources{
     width: 45%;
     right:1%;
     bottom: -100%;
-    animation: rising_explanation, leaving_explanation;
+    /* animation: rising_explanation, leaving_explanation;
     animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count:  infinite, infinite; 
-    animation-delay: 20s, 40s;
+    animation-delay: 20s, 40s; */
+    animation: explanation 125s ease 20s infinite;
+
 }
 
 
-
-
-
-@keyframes rising_explanation {
-  0% {bottom: -100%; opacity: 0;}
-  6%{bottom: 15%; opacity:1;}
-  100% {bottom:15%; opacity: 1;}
+@keyframes explanation {
+    0% {
+        bottom: -100%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 15%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 15%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 100%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_explanation {
-    0% {bottom: 15%; opacity: 1;}
-    9% {bottom: 150%; opacity: 0;}
-    100%{bottom: 150%; opacity: 0;}
-  }
+
 
 
 
@@ -268,26 +294,42 @@ h3.resources{
     width: 45%;
     bottom: -100%;
     right:1%;
-    animation: rising_participation, leaving_participation;
+    /* animation: rising_participation, leaving_participation;
     animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 40s, 60s;
-    height: fit-content;
-}
+    height: fit-content; */
+    animation: participation 125s ease 40s infinite;
 
-@keyframes rising_participation {
-    0% {bottom: -100%; opacity: 0;}
-    6% {bottom:4%; opacity: 1;}
-    100% {bottom:4%; opacity: 1;}
 }
 
 
-@keyframes leaving_participation {
-    0% {bottom: 4%; opacity: 1;}
-    9% {bottom: 150%; opacity: 0;}
-    100%{bottom: 150%; opacity: 0;}
+@keyframes participation {
+    0% {
+        bottom: -100%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 5%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 5%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 100%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 100%;
+        opacity: 0;
+      }
 }
+
+
+
 
 .participation > h3{
     color: #665844;
@@ -317,25 +359,40 @@ h3.resources{
     width: 45%;
     bottom: -100%;
     right:1%;
-    animation: rising_benefits, leaving_benefits;
+    /* animation: rising_benefits, leaving_benefits;
     animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 60s, 80s;
-    height: fit-content;
+    height: fit-content; */
+    animation: benefits 125s ease 60s infinite;
 }
 
-@keyframes rising_benefits{
-    0% {bottom: -100%; opacity: 0;}
-    6% {bottom:29%; opacity: 1;}
-    100% {bottom: 29%; opacity: 1;}
+
+@keyframes benefits {
+    0% {
+        bottom: -100%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 29%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 29%;
+        opacity: 1;
+      }
+      25% {
+        bottom: 200%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 200%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_benefits {
-    0% {bottom: 29%; opacity: 1;}
-    9% {bottom: 200%; opacity: 0;}
-    100%{bottom: 200%; opacity: 0;}
-}
+
 
 .benefits > h3{
     color: #665844;
@@ -391,116 +448,198 @@ h3.resources{
 .requirements > h3:nth-child(1){
     position: absolute;
     bottom: 0%;
-    animation: requirements_h3, leaving_h3;
+    /* animation: requirements_h3, leaving_h3;
     animation-fill-mode: forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 80s, 100s;
-    opacity: 1;
+    opacity: 1; */
+    animation: requirements_h3 125s ease 80s infinite;
 }
+
+
 
 @keyframes requirements_h3{
-    0% {bottom: 0%; opacity: 0;}
-    6% {bottom: 140%; opacity: 1;}
-    100% {bottom: 140%; opacity: 1;}
+    0% {
+        bottom: 0%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 143%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 143%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 200%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 200%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_h3 {
-    0% {bottom:140%; opacity: 1;}
-    9% {bottom:200%; opacity: 0;}
-    100% {bottom:200%; opacity: 0;}
-}
+
 
 .requirements > p:first-of-type{
     bottom: -12%;
-    animation: requirements_p_1, leaving_p_1;
+    /* animation: requirements_p_1, leaving_p_1;
     animation-fill-mode: forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 80s, 100s;
-    opacity: 1;
+    opacity: 1; */
+    animation: requirements_p_1 125s ease 80s infinite;
 }
+
+
 
 @keyframes requirements_p_1{
-    0% {bottom: -12%; opacity: 0;}
-    6% {bottom: 128%; opacity: 1;}
-    100% {bottom: 128%; opacity: 1;}
+    0% {
+        bottom: -12%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 128%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 128%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 185%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 185%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_p_1 {
-    0% {bottom:128%; opacity: 1;}
-    9% {bottom:188%; opacity: 0;}
-    100% {bottom:188%; opacity: 0;}
-}
+
+
+
 
 .requirements > p:nth-of-type(2){
     bottom: -28%;
-    animation: requirements_p_2, leaving_p_2;
+    /* animation: requirements_p_2, leaving_p_2;
     animation-fill-mode: forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 80s, 100s;
-    opacity: 1;
+    opacity: 1; */
+    animation: requirements_p_2 125s ease 80s infinite;
 }
+
+
 
 @keyframes requirements_p_2{
-    0% {bottom: -28%; opacity: 0;}
-    6% {bottom: 112%; opacity: 1;}
-    100% {bottom: 112%; opacity: 1;}
+    0% {
+        bottom: -28%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 112%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 112%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 169%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 169%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_p_2 {
-    0% {bottom:112%; opacity: 1;}
-    9% {bottom:172%; opacity: 0;}
-    100% {bottom:172%; opacity: 0;}
-}
+
 
 
 .requirements > p:nth-of-type(3){
     bottom: -12%;
-    animation: requirements_p_3, leaving_p_3;
+    /* animation: requirements_p_3, leaving_p_3;
     animation-fill-mode: forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 100s, 120s;
-    opacity: 1;
+    opacity: 1; */
+    animation: requirements_p_3 125s ease 100s infinite;
 }
+
+
 
 @keyframes requirements_p_3{
-    0% {bottom: -12%; opacity: 0;}
-    6% {bottom: 128%; opacity: 1;}
-    100% {bottom: 128%; opacity: 1;}
+    0% {
+        bottom: -12%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 128%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 128%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 185%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 185%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_p_3 {
-    0% {bottom:128%; opacity: 1;}
-    9% {bottom:188%; opacity: 0;}
-    100% {bottom:188%; opacity: 0;}
-}
+
 
 
 .requirements > p:nth-of-type(4){
     bottom: -22%;
-    animation: requirements_p_4, leaving_p_4;
+    /* animation: requirements_p_4, leaving_p_4;
     animation-fill-mode: forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-iteration-count: infinite, infinite;
     animation-delay: 100s, 120s;
-    opacity: 1;
+    opacity: 1; */
+    animation: requirements_p_4 125s ease 100s infinite;
 }
+
+
 
 @keyframes requirements_p_4{
-    0% {bottom: -22%; opacity: 0;}
-    6% {bottom: 118%; opacity: 1;}
-    100% {bottom: 118%; opacity: 1;}
+    0% {
+        bottom: -22%;
+        opacity: 0;
+      }
+      3.081% {
+        bottom: 118%;
+        opacity: 1;
+      }
+      16% {
+        bottom: 118%;
+        opacity: 1;
+      }
+      22% {
+        bottom: 175%;
+        opacity: 0;
+      }
+      100% {
+        bottom: 175%;
+        opacity: 0;
+      }
 }
 
-@keyframes leaving_p_4{
-    0% {bottom:118%; opacity: 1;}
-    9% {bottom:178%; opacity: 0;}
-    100% {bottom:178%; opacity: 0;}
-}
+
 
 
 
