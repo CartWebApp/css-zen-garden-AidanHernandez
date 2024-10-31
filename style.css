@@ -150,46 +150,47 @@ h3.resources{
     position: absolute;
     width: 45%;
     right:1%;
-    bottom: 10%;
+    bottom: -100%;
     opacity: 1;
-    animation: rising_preamble, leaving_preamble;
-    animation-fill-mode: forwards;
-    animation-duration: 125s, 130s; 
+    /* animation: rising_preamble, leaving_preamble;
+    animation-fill-mode: forwards, forwards;
+    animation-duration: 120s, 130s; 
     animation-iteration-count:  infinite, infinite; 
-    animation-delay: 0s, 20s;
+    animation-delay: 1s, 20s; */
+    animation: rising_preamble 120s ease 0s infinite, leaving_preamble 130s ease 20s infinite forwards;
 }
 
 
 
-@keyframes rising_preamble {
+@keyframes rising_preamble{
     0% {
-        bottom: -100%;
-        opacity: 0;
+        bottom: -100%; opacity: 0;
       }
-      4% {
+
+    4% {
         bottom: 10%;
         opacity: 1;
       }
-      100% {
+    100% {
         bottom: 10%;
         opacity: 1;
       }
 }
 
-@keyframes leaving_preamble {
+@keyframes leaving_preamble{
     0% {
         bottom: 10%;
         opacity: 1;
       }
-      7.692% {
+    7.692% {
         bottom: 100%;
         opacity: 0;
-      }
-      100% {
-        bottom: 100%;
-        opacity: 0;
-      }
-  }
+    }
+    40%{bottom: -100%; opacity: 0;}
+    50%{bottom: -100%; opacity: 1;}
+
+    100% {bottom: -100%; opacity: 1;}
+}
 
 
 .preamble > h3:first-of-type{
@@ -218,7 +219,7 @@ h3.resources{
     right:1%;
     bottom: -100%;
     animation: rising_explanation, leaving_explanation;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count:  infinite, infinite; 
     animation-delay: 20s, 40s;
@@ -268,7 +269,7 @@ h3.resources{
     bottom: -100%;
     right:1%;
     animation: rising_participation, leaving_participation;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 40s, 60s;
@@ -317,7 +318,7 @@ h3.resources{
     bottom: -100%;
     right:1%;
     animation: rising_benefits, leaving_benefits;
-    animation-fill-mode: forwards;
+    animation-fill-mode:forwards, forwards;
     animation-duration: 125s, 135s; 
     animation-iteration-count: infinite, infinite; 
     animation-delay: 60s, 80s;
@@ -327,7 +328,7 @@ h3.resources{
 @keyframes rising_benefits{
     0% {bottom: -100%; opacity: 0;}
     6% {bottom:29%; opacity: 1;}
-    100% {bottom:29%; opacity: 1;}
+    100% {bottom: 29%; opacity: 1;}
 }
 
 @keyframes leaving_benefits {
@@ -500,6 +501,7 @@ h3.resources{
     9% {bottom:178%; opacity: 0;}
     100% {bottom:178%; opacity: 0;}
 }
+
 
 
 
