@@ -106,6 +106,7 @@ header{
 }
 
 .design-archives{
+  z-index: 100;
     display: inline-flex;
     position: absolute;
     top:35%;
@@ -120,32 +121,56 @@ header{
 
 .archives{
     align-self: center;
-    font-size: 30px
+    font-size: 30px;
+  margin-right: 30%;
 }
 
-[role =navigation]{
-    position: absolute;
-    background-image: url(img/swing_2.png);
-    height: 10vh;
-    width: 10Vw;
+.design-archives > nav[role = navigation]{
+  background-image: url(img/swing_2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 15%;
+  content: "";
+  position: absolute;
+  top:7%;
+  left: 8%;
 }
+
+.design-archives > nav[role = navigation] > ul{
+  list-style: none;
+}
+
+.design-archives > nav[role = navigation] > ul > .viewall{
+  position: absolute;
+  font-size: 25px;
+  top:120%;
+  left:-5%
+}
+
+.design-archives > nav[role = navigation] > ul > .viewall > a{
+  color: #E699B8;
+}
+
+
 
 
 .zen-resources{
     display: inline-flex;
     flex-flow: column wrap;
     position: fixed;
-    width: 70%;
+    width: fit-content;
     color: #E699B8;
     top:13%;
     z-index: 999;
+    right: 30%;
 }
 
 
 
 h3.resources{
     width: fit-content;
-    align-self: flex-end;
+    align-self: center;
     font-size: 40px;
     margin-bottom: 0;
     margin-right: 5%;
